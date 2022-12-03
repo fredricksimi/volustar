@@ -1,0 +1,151 @@
+{% extends "mainapp/base.html" %}
+{% load static %}
+{% block content %}
+<style>
+	.site-blocks-cover.overlay{
+		position:relative;
+	}
+
+	.site-blocks-cover{
+		background-size:cover;
+		background-repeat: no-repeat;
+		background-position: center center;
+	}
+
+</style>
+        <div id="colorlib-main">
+			<aside id="colorlib-hero" class="js-fullheight">
+				<div class="flexslider js-fullheight site-blocks-cover overlay" style="background-image: url(../../static/images/newlanding4.jpg);">
+					<div class="" data-aos="fade">
+						<div class="container">
+							<div class="row align-items-center justify-content-center" style="min-height: 600px;height: calc(100vh);">
+								<div class="col-md-12" data-aos="fade-up" data-aos-delay="400">
+									<div class="row mb-4" style="margin-top:360px;">
+										<div class="col-md-7">
+											<h1
+												style="display: grid;place-items: center;color:white;font-family: 'Montserrat', sans-serif;font-size:50px !important;">
+												Get a chance to volunteer at organizations with us</h1>
+											<div>
+												<a href="{% url 'mainapp:contact' %}" class="btn btn-primary mr-2 mb-2" style="color:black;font-weight:bold;">Get in Touch</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</aside>
+
+			<div class="colorlib-about" style="padding-bottom:4em;">
+				<div class="colorlib-narrow-content">
+					<div class="row">
+						<br>
+						<div class="col-md-12 animate-box" data-animate-effect="fadeInLeft">
+							<div class="row">
+								<div class="col-md-7">
+									<div class="about-desc">
+										<span class="heading-meta">Welcome</span>
+										<h2 class="loading" style="font-size: 18px;font-weight: 500;text-transform:uppercase;letter-spacing:5px;line-height:1.8;font-family: 'Quicksand', Arial, sans-serif;">Who we are</h2>
+										<p>We convert potential students through targeted virtual and physical recruitment initiatives. The intention for this approach, is to build strong relationships between our partner institutions to enhance admissions.</p>
+										<p>We are working towards compounding the number of excellent
+											students enrolled in our partner institutions- Several institutions
+											are journeying into Africa and to effectively tap into this
+											market, we must creatively and sustainably position our
+											partners for them to remain competitive, we therefore need
+											their involvement and support to achieve this.</p>
+									</div>
+								</div>
+								<div class="col-md-5" style="display:inline-block;vertical-align:middle;float:none;">
+									<div class="">
+										<img src="{% static 'images/removedbg1.png' %}" class="img-fluid" style="width:400px;height:auto;">
+									</div>
+								</div>
+							</div>
+							<br><br>
+							<div class="row padding">
+								<div class="col-md-4 no-gutters animate-box" data-animate-effect="fadeInLeft">
+									<a href="#" class="steps">
+										<p class="icon"><span><i class="icon-check" style="color:#004579!important;"></i></span></p>
+										<h3>We are<br>passionate</h3>
+									</a>
+								</div>
+								<div class="col-md-4 no-gutters animate-box" data-animate-effect="fadeInLeft">
+									<a href="#" class="steps">
+										<p class="icon"><span><i class="icon-check" style="color:#004579!important;"></i></span></p>
+										<h3>Honest &<br>Dependable</h3>
+									</a>
+								</div>
+								<div class="col-md-4 no-gutters animate-box" data-animate-effect="fadeInLeft">
+									<a href="#" class="steps">
+										<p class="icon"><span><i class="icon-check" style="color:#004579!important";></i></span></p>
+										<h3>Always<br>Improving</h3>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="colorlib-services">
+				<div class="colorlib-narrow-content">
+					<div class="row">
+						<div class="col-md-6 col-md-offset-3 col-md-pull-3 animate-box" data-animate-effect="fadeInLeft">
+							<span class="heading-meta">What we do?</span>
+							<h2 class="colorlib-heading">Here are some of our work</h2>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-12">
+							<div class="row">
+								<div class="col-md-6">
+									<div class="colorlib-feature animate-box" data-animate-effect="fadeInLeft">
+										<div class="colorlib-icon">
+											<i class="flaticon-worker" style="color:#004579"></i>
+										</div>
+										<div class="colorlib-text">
+											<h3></h3>
+											<p>Research on management systems, physical infrastructure, internal quality assurance and Partnership with Organizations and Companies</p>
+										</div>
+									</div>
+									<div class="colorlib-feature animate-box" data-animate-effect="fadeInLeft">
+										<div class="colorlib-icon">
+											<i class="icon-tick" style="color:#004579"></i>
+										</div>
+										<div class="colorlib-text">
+											<h3></h3>
+											<p>Identify and Prescreening of Students for volunteering opportunities</p>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="colorlib-feature animate-box" data-animate-effect="fadeInLeft">
+										<div class="colorlib-icon">
+											<i class="icon-arrow-sync" style="color:#004579"></i>
+										</div>
+										<div class="colorlib-text">
+											<h3></h3>
+											<p>Matching students with Companies & Organizations and providing them with 360 support</p>
+										</div>
+									</div>
+								
+									<div class="colorlib-feature animate-box" data-animate-effect="fadeInLeft">
+										<div class="colorlib-icon">
+											<i class="icon-group-outline" style="color:#004579"></i>
+										</div>
+										<div class="colorlib-text">
+											<h3></h3>
+											<p>Enrolling students in institutions and providing post enrollment support</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+            <br><br>
+		{% include "mainapp/footer.html" %}
+		</div>
+{% endblock content %}
+

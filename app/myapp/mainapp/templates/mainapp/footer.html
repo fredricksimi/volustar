@@ -1,0 +1,24 @@
+{% load static %}
+<div id="get-in-touch" class="colorlib-bg-color">
+    <div class="colorlib-narrow-content">
+        <div class="row">
+            <div class="col-md-4 animate-box" data-animate-effect="fadeInLeft">
+                <h1 style="padding-top:50px; padding-left:20px; font-weight:bold;" class="">How can we help?</h1>
+                <p class="" style=" padding-left:20px;">
+                    We will be delighted to answer any questions that you may have.
+                </p>
+            </div>
+            <div class="col-md-4 animate-box">
+                <p style="padding-top:50px;" class="text-center">
+                    <a href="{% url 'mainapp:contact' %}" class="btn btn-learn"
+                        style="box-shadow: 0 9px 12px -6px rgb(0 0 0 / 78%);background-color:#004579;font-weight:bold;color:white!important;">
+                        Contact Us!</a>
+                </p>
+            </div>
+            <div class="col-md-4 animate-box" data-animate-effect="fadeInRight">
+                <center><img src="{% static 'images/woman.png' %}" class="img-fluid" style="height:150px;width:auto;"
+                    ></center>
+            </div>
+        </div>
+    </div>
+</div>

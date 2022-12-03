@@ -1,0 +1,82 @@
+{% extends "mainapp/base.html" %}
+{% load static %}
+{% load crispy_forms_tags %}
+{% block content %}
+<style>
+.db-shy {
+	font-size: 18px;
+	margin-bottom: 4em;
+	font-weight: 500;
+	text-transform: uppercase;
+	letter-spacing: 5px;
+	line-height: 1.8;
+	position: relative;
+	font-family: 'Quicksand', Arial, sans-serif;
+}
+
+.wave {
+  animation-name: wave-animation;  /* Refers to the name of your @keyframes element below */
+  animation-duration: 2.5s;        /* Change to speed up or slow down */
+  animation-iteration-count: infinite;  /* Never stop waving :) */
+  transform-origin: 70% 70%;       /* Pivot around the bottom-left palm */
+  display: inline-block;
+}
+
+@keyframes wave-animation {
+    0% { transform: rotate( 0.0deg) }
+   10% { transform: rotate(14.0deg) }  /* The following five values can be played with to make the waving more or less extreme */
+   20% { transform: rotate(-8.0deg) }
+   30% { transform: rotate(14.0deg) }
+   40% { transform: rotate(-4.0deg) }
+   50% { transform: rotate(10.0deg) }
+   60% { transform: rotate( 0.0deg) }  /* Reset for the last half to pause */
+  100% { transform: rotate( 0.0deg) }
+}
+</style>
+<div id="colorlib-main">
+			<div class="colorlib-contact">
+				<div class="colorlib-narrow-content">
+					<div class="row">
+						<div class="col-md-12 animate-box" data-animate-effect="fadeInLeft">
+							<span class="heading-meta">Let's Talk</span>
+							<span class="db-shy">Don't be shy, say Hi! <span class="wave" style="font-size:25px">👋</span></span>
+						</div>
+					</div>
+					<br><br>
+					<div class="row">
+						<div class="col-md-7">
+							<div class="row">
+								<div class="col-md-10 col-md-offset-1 col-md-pull-1 animate-box"
+									data-animate-effect="fadeInLeft">
+									<form method="post">
+										{% csrf_token %}
+										<div class="form-group">
+											{{form.name|as_crispy_field}}
+										</div>
+										<div class="form-group">
+											{{form.email|as_crispy_field}}
+										</div>
+										<div class="form-group">
+											{{form.subject|as_crispy_field}}
+										</div>
+										<div class="form-group">
+											{{form.message|as_crispy_field}}
+										</div>
+										<div class="form-group">
+											<input type="submit" class="btn btn-send-message"
+												style="background-color: #004579;color:white;font-weight:bold;"
+												value="Send Message">
+										</div>
+									</form>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-5 ">
+							<div class="about-img animate-box fadeInLeft animated" data-animate-effect="fadeInLeft" style="background-image: url(../../static/images/contactimage.png);">
+					</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>  
+{% endblock content %}

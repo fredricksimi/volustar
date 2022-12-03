@@ -1,0 +1,38 @@
+{% extends "mainapp/base.html" %}
+{% load crispy_forms_tags %}
+{% block content %}
+<div id="colorlib-main">
+    <div class="container" id="colorlib-about">
+        <h2 class="text-center py-5" style="font-weight:bold">Fill this form for a chance to volunteer</h2>
+        <div class="colorlib-narrow-content">
+            <div class="row">
+                <div class="col-md-2"></div>
+                    <form method="POST">
+                        {% csrf_token %}
+                        <div class="col-md-8 mx-auto">
+                            {{form.fullname|as_crispy_field}}
+                            <br>
+                            {{form.email|as_crispy_field}}
+                            <br>
+                            {{form.phone|as_crispy_field}}
+                            <br>
+                            {{form.gender|as_crispy_field}}
+                            <br>
+                            {{form.residential_address|as_crispy_field}}
+                            <br>
+                            {{form.city|as_crispy_field}}
+                            <br>
+                            {{form.country|as_crispy_field}}
+                            <br>
+                            {{form.any_other_info|as_crispy_field}}
+                            <br>
+                            <center><button type="submit" class="btn btn-success">Submit</button></center>
+                        </div>
+                    </form><br><br><br>
+            </div>
+        </div>
+        
+    </div>
+</div>
+
+{% endblock content %}
